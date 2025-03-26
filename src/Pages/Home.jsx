@@ -18,7 +18,7 @@ export const Home = () => {
           <input
             placeholder="busque aqui su contenido"
             type="text"
-            className="w-full bg-white rounded-xl active:no-underline p-2 relative outline-0 text-gray-600 caret-blue-600 "
+            className="w-full bg-white rounded-xl active:no-underline p-2 relative outline-0 text-gray-600 "
           />
           <a
             href="#"
