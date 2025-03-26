@@ -9,16 +9,16 @@ export const Home = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className=" rounded-md h-[200px] w-full p-5  "
+        className=" h-[250px] w-full p-5   "
       >
-        <h1 className="text-5xl font-bold text-white shadow">
+        <h1 className="text-5xl font-bold text-white shadow-md">
           Todo el contenido <br /> en un solo lugar
         </h1>
         <form action="" className=" mt-4">
           <input
             placeholder="busque aqui su contenido"
             type="text"
-            className="w-full bg-white rounded-xl active:no-underline p-2 relative "
+            className="w-full bg-white rounded-xl active:no-underline p-2 relative outline-0 text-gray-600 caret-blue-600 "
           />
           <a
             href="#"
