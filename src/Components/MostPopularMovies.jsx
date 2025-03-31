@@ -20,8 +20,6 @@ export const MostPopularMovies = () => {
     fetchmovies();
   }, []);
 
-  console.log(movies);
-
   return (
     <article className="container ">
       <h2 className="text-4xl font-bold text-sky-700">Peliculas más vistas</h2>
