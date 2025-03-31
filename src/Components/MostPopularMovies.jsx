@@ -4,8 +4,8 @@ import pelicula from "../assets/images/pelicula.webp";
 import { data } from "react-router-dom";
 
 export const MostPopularMovies = () => {
-  const pathURL = "https://image.tmdb.org/t/p/w500";
-  const [movies, setMovies] = useState([""]);
+  const pathURL = "https://image.tmdb.org/t/p/w300";
+  const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
 
   /* [0].poster_path */
@@ -14,11 +14,13 @@ export const MostPopularMovies = () => {
     async function fetchmovies() {
       setLoading(true);
       const data = await getPopularMovies();
-      setMovies(data);
+      setMovies(data.results);
       setLoading(false);
     }
     fetchmovies();
   }, []);
+
+  console.log(movies);
 
   return (
     <article className="container ">
@@ -28,7 +30,11 @@ export const MostPopularMovies = () => {
           <div>Loading...</div>
         ) : (
           movies.map((movie, i) => (
-            <div className="col-span-1 shadow-2xl rounded-md p-2">
+            <a
+              href="#"
+              key={i}
+              className="col-span-1 shadow-2xl rounded-md p-2"
+            >
               <div className="w-full">
                 <img src={`${pathURL}${movie.poster_path}`} alt="" />
               </div>
@@ -40,7 +46,7 @@ export const MostPopularMovies = () => {
                     : "Sin fecha"}
                 </p>
               </div>
-            </div>
+            </a>
           ))
         )}
       </div>
